@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Título de la pantalla -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matriculació"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <!-- Contenedor de Materias -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_margin="16dp">
+
+        <!-- Texto de Selección de Materias -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona les matèries:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:layout_gravity="start"/>
+
+        <!-- GridLayout para organizar los CheckBoxes en dos columnas -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:alignmentMode="alignMargins"
+            android:rowCount="4"
+            android:layout_gravity="center">
+
+            <CheckBox
+                android:id="@+id/cbMateria1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Desenvolupament d'interfícies"
+                android:layout_margin="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <CheckBox
+                android:id="@+id/cbMateria2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Programació multimèdia i dispositius mòbils"
+                android:layout_margin="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <CheckBox
+                android:id="@+id/cbMateria3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Programació de serveis i processos"
+                android:layout_margin="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <CheckBox
+                android:id="@+id/cbMateria4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Projecte"
+                android:layout_margin="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <CheckBox
+                android:id="@+id/cbMateria5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Disseny 2D i 3D"
+                android:layout_margin="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <CheckBox
+                android:id="@+id/cbMateria6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Sistemes de gestió empresarial"
+                android:layout_margin="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <CheckBox
+                android:id="@+id/cbMateria7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Game Design"
+                android:layout_margin="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <CheckBox
+                android:id="@+id/cbMateria8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Programació de videojocs 2D i 3D"
+                android:layout_margin="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </GridLayout>
+    </LinearLayout>
+
+    <!-- Contenedor de Turno -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_margin="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Texto de Selección de Turno -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona el torn:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:layout_gravity="start"/>
+
+        <!-- RadioGroup en un contenedor centrado -->
+        <RadioGroup
+            android:id="@+id/rgTurno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/rbMatí"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matí"
+                android:layout_marginEnd="16dp" />
+
+            <RadioButton
+                android:id="@+id/rbTarda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarda" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Botón para confirmar la selección -->
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp" />
+
+</LinearLayout>
